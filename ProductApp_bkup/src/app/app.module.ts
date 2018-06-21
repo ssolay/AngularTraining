@@ -5,9 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard.component'
 import { ProductComponent } from "./products/product.component";
-import { upperValuePipe } from "./products/upperValue.pipe";
-import { AddValuePipe } from "./products/addValue.pipe";
-import { ProductFilterPipe } from "./products/productFilter.pipe";
 
 @NgModule({
 
@@ -20,10 +17,7 @@ import { ProductFilterPipe } from "./products/productFilter.pipe";
     declarations:[
         AppComponent,
         DashboardComponent,
-        ProductComponent,
-        upperValuePipe,
-        AddValuePipe,
-        ProductFilterPipe
+        ProductComponent
     ],
     //Only First Component
     bootstrap:[
