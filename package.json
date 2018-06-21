@@ -1,0 +1,19 @@
+{
+  "name": "dummy",
+  "version": "1.0.0",
+  "description": "Testing Package.json",
+  "main": "Car.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssolay/AngularTraining.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssolay/AngularTraining/issues"
+  },
+  "homepage": "https://github.com/ssolay/AngularTraining#readme"
+}
