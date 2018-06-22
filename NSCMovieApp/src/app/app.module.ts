@@ -6,13 +6,16 @@ import { AppComponent } from './app.component';
 import { MovieComponent } from "./movies/movie.component";
 import { upperValuePipe } from "./movies/upperValue.pipe";
 import { MovieFilterPipe} from "./movies/movieFilter.pipe";
+import { LangFilterPipe} from "./movies/languageFilter.pipe";
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
 
     //All Module decl here
     imports:[
         BrowserModule,
-        FormsModule
+        FormsModule,
+        NgxPaginationModule
     ],
     //All Component & Pipe
     declarations:[
@@ -20,6 +23,7 @@ import { MovieFilterPipe} from "./movies/movieFilter.pipe";
         MovieComponent,
         upperValuePipe,
         MovieFilterPipe,
+        LangFilterPipe,
     ],
     //Only First Component
     bootstrap:[

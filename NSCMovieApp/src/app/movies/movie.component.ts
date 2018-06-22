@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 
-@Component({selector: 'movie-comp',templateUrl: 'movie.component.html',styleUrls: ['movie.component.css']})
+@Component({selector: 'movie-comp,date-pipe',templateUrl: 'movie.component.html',styleUrls: ['movie.component.css']})
 export class MovieComponent{
-    title:string="Reserve your Favorite Movies";
+    title:string="Reserve / Play your Favorite Movies Today";
     showTable:boolean=true;
     showImage:boolean=false;
     filtertext:string;
     imageWidth:number=150;
+    p: number = 1;
+    today: number = Date.now();
     movies:any[]=[
         {
             _id: "5ab12612f36d2879268f284a",

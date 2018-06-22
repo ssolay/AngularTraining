@@ -1,15 +1,25 @@
 
 <div class="panel panel-primary">
     <div class="panel-heading">
-       {{title}}
+        <div class="row">
+          <div class="col-md-4">
+                {{title}}
+          </div>
+          <div class="col-md-6">
+                <span class="text-right"> Today is {{today | date}} </span>
+          </div>
+        </div>    
+       
     </div>
     <div class="panel-body">
         <div class="row">
             <div class="col-md-2">
                 <b>Search:</b>
+                <p></p>
             </div>
             <div class="col-md-4">
-                <input type="text" [(ngModel)]="filtertext"/>
+                <input type="text" width="2" [(ngModel)]="filtertext"/>
+                <input type="text" [(ngModel)]="filtertext1"/>
             </div>
         </div>
         <div class="table-responsive">
@@ -29,7 +39,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let movie of movies | movieFilter:filtertext">
+                    <tr *ngFor="let movie of movies | movieFilter:filtertext | langFilter:filtertext1 | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
                         <td>
                             <img [style.width.px]="imageWidth" [src]="movie.imageUrl"/>
                         </td>
@@ -54,6 +64,7 @@
     
                     </tr>
                 </tbody>
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
             </table>
         </div>
   </div>
