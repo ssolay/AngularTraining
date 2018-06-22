@@ -1,0 +1,53 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+       {{title}}
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-2">
+                <b>Search:</b>
+            </div>
+            <div class="col-md-4">
+                <input type="text" [(ngModel)]="filtertext"/>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <!--<button class="btn btn-success" (click)="toggleImage()">
+                                {{showImage?"Hide Image":"Show Image"}}
+                            </button>-->
+                        </th>
+                        <th>Name</th>
+                        <th>Language</th>
+                        <th>Star Rating</th>
+                        <th>Type</th>
+                        <!--<th>Star Rating</th>-->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let movie of movies | movieFilter:filtertext">
+                        <td>
+                            <img [style.width.px]="imageWidth" [src]="movie.imageUrl"/>
+                        </td>
+                        <!--<td>{{movie.name}}</td>-->
+                        <td>{{movie.name | upperUtil:"upper"}}</td>
+                        <td>{{movie.language | upperUtil:"upper"}}</td>
+                        <td>{{movie.rate}}</td>
+                        <td>{{movie.type}}</td>
+                        <td>
+                            <button class="btn btn-success" (click)="toggleImage()">
+                                Reserve
+                            </button>
+
+                        </td>
+    
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+  </div>
+</div> 
