@@ -21,6 +21,9 @@
                 <input type="text" width="2" [(ngModel)]="filtertext"/>
                 <input type="text" [(ngModel)]="filtertext1"/>
             </div>
+            <div class="col-md-6" align="right">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
         </div>
         <div class="table-responsive">
             <table class="table">
@@ -64,7 +67,7 @@
     
                     </tr>
                 </tbody>
-                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                
             </table>
         </div>
   </div>
