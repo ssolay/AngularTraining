@@ -18,8 +18,8 @@
                 <p></p>
             </div>
             <div class="col-md-4">
-                <input type="text" width="2" [(ngModel)]="filtertext"/>
-                <input type="text" [(ngModel)]="filtertext1"/>
+                <input type="text" class="format" [(ngModel)]="filtertext"/>
+                <input type="text" class="format" [(ngModel)]="filtertext1"/>
             </div>
             <div class="col-md-6" align="right">
             <pagination-controls (pageChange)="p = $event"></pagination-controls>
@@ -49,7 +49,10 @@
                         <!--<td>{{movie.name}}</td>-->
                         <td>{{movie.name | upperUtil:"upper"}}</td>
                         <td>{{movie.language | upperUtil:"upper"}}</td>
-                        <td>{{movie.rate}}</td>
+                        <!--<td>{{movie.rate}}</td>-->
+                        <td><star-comp [rating]="movie.rate"
+                            (ratingClicked)="onDataRecive($event)">
+                        </star-comp></td>
                         <td>{{movie.type}}</td>
                         <td>
                             <button class="btn btn-success" (click)="toggleImage()">

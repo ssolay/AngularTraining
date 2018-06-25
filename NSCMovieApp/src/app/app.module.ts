@@ -8,6 +8,8 @@ import { upperValuePipe } from "./movies/upperValue.pipe";
 import { MovieFilterPipe} from "./movies/movieFilter.pipe";
 import { LangFilterPipe} from "./movies/languageFilter.pipe";
 import {NgxPaginationModule} from 'ngx-pagination';
+import { StarComponent } from './shared/starDisplay/star.component';
+//import { StarRatingModule } from 'angular-star-rating';
 
 @NgModule({
 
@@ -16,6 +18,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
         BrowserModule,
         FormsModule,
         NgxPaginationModule
+        //StarRatingModule.forRoot()
     ],
     //All Component & Pipe
     declarations:[
@@ -24,6 +27,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
         upperValuePipe,
         MovieFilterPipe,
         LangFilterPipe,
+        StarComponent,
+        //StarRatingModule,
     ],
     //Only First Component
     bootstrap:[
