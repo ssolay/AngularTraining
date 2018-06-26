@@ -9,6 +9,9 @@ import { MovieFilterPipe} from "./movies/movieFilter.pipe";
 import { LangFilterPipe} from "./movies/languageFilter.pipe";
 import {NgxPaginationModule} from 'ngx-pagination';
 import { StarComponent } from './shared/starDisplay/star.component';
+import { routing }        from './app.routing';
+import { MusicComponent } from "./music/music.component";
+import { HomeComponent } from "./home/home.component";
 //import { StarRatingModule } from 'angular-star-rating';
 
 @NgModule({
@@ -17,7 +20,8 @@ import { StarComponent } from './shared/starDisplay/star.component';
     imports:[
         BrowserModule,
         FormsModule,
-        NgxPaginationModule
+        NgxPaginationModule,
+        routing
         //StarRatingModule.forRoot()
     ],
     //All Component & Pipe
@@ -28,6 +32,8 @@ import { StarComponent } from './shared/starDisplay/star.component';
         MovieFilterPipe,
         LangFilterPipe,
         StarComponent,
+        MusicComponent,
+        HomeComponent,
         //StarRatingModule,
     ],
     //Only First Component

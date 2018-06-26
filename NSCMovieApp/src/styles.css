@@ -11,3 +11,23 @@
     top: 18px;
     left: 10px;
   }
+  .wrap {
+    width: 300px;
+        position: relative;
+    }
+    
+    .wrap img {
+    float: left;
+    }
+    
+    .wrap h1 {
+    line-height: 50px;
+    }
+    #nav_bar {
+      background-color:darkcyan;
+      border-color:darkcyan;
+      height: 100px;
+      }
+      ul li{
+        color: red
+    }

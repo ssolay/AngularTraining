@@ -1,6 +1,6 @@
 <div class="panel panel-primary">
     <div class="panel-heading">
-        {{title}}
+       {{title}}
     </div>
     <div class="panel-body">
         <div class="row">
@@ -13,10 +13,11 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <b>Filtered By:{{filtertext}} </b>
+                <h2>Filtered By:{{filtertext}} </h2>
             </div>
         </div>
         {{showImage}}
+        {{errorMessage}}
         <div class="table-responsive" *ngIf="showTable">
             <table class="table">
                 <thead>
@@ -42,7 +43,9 @@
                         <td>{{product.productCode | myUpper:"lower"}}</td>
                         <td>{{product.releaseDate}}</td>
                         <td [ngStyle]="{'color':product.price<30?'red':'green'}">{{product.price | addValue | currency:"GBP"}}</td>
-                        <td>{{product.starRating}}</td>
+                        <td><star-comp [rating]="product.starRating"
+                                (ratingClicked)="onDataRecive($event)">
+                            </star-comp></td>
                     </tr>
                 </tbody>
             </table>

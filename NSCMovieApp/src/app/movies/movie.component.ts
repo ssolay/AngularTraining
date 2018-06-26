@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({selector: 'movie-comp,date-pipe',templateUrl: 'movie.component.html',styleUrls: ['movie.component.css']})
 export class MovieComponent{
-    title:string="Reserve / Play your Favorite Movies Today";
+    //title:string="Reserve / Play your Favorite Movies Today";
     showTable:boolean=true;
     showImage:boolean=false;
     filtertext:string;

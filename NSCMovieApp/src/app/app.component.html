@@ -1,15 +1,57 @@
 
 
-<div>
-    <img src="/../assets/images/nsc.jpg" alt="logo" style="width:30px;height:30px;float:left;"/>
+<!--<div>
+    <!--<img src="/../assets/images/nsc.jpg" alt="logo" style="width:30px;height:30px;float:left;"/>
     <h1 align="center" style="color:rebeccapurple;">NSC Movie Portal</h1>
-    <p>
+    <!--<p>
         <b>Source code : </b><a href="https://github.com/ssolay/AngularTraining/tree/master/NSCMovieApp" target="_top">GitHub</a>
         
         <b>Contact : </b><a href="https://www.linkedin.com/in/solayappan-solayappan-8304417/" target="_top">GoCaps</a>
-    </p>
+    </p>-->
+    <!--<img src="http://s14.postimage.org/h9nve7fj1/Getty_Images_Black_normal.jpg" />
+<h1>My website name</h1>
+    <div style="clear: both;"></div>
     <movie-comp></movie-comp>
- </div>
+ </div>-->
+
+ <!--<div class="row">-->
+    <!--<div class="col-md-4">
+        <img src="/../assets/images/nsc.jpg" alt="logo" style="width:100px;height:100px;" class="center"/>
+    </div>
+    <div class="col-md-8">
+        <h1 style="color:white;text-align:left;" >Movies / Music App</h1>
+        
+    </div>-->
+    <!--<movie-comp></movie-comp>-->
+    <div>
+        <nav id="nav_bar" class="navbar navbar-inverse">
+        <div class="row">
+    <div class="col-md-4">
+        <img src="/../assets/images/nsc.jpg" alt="logo" style="width:99px;height:99px;" class="center"/>
+    </div>
+    <div class="col-md-8">
+        <h1 style="color:white;font-size:30px;text-align:left;" >Movies / Music App</h1>
+        <div class="col-md-6">
+                <ul class="nav navbar-nav">
+                    <li><a style="color:white;font-size:20px;" [routerLink]="['/home']">Home</a></li>
+                    <li><a style="color:white;font-size:20px;" [routerLink]="['/movie']">Movies</a></li>
+                    <li><a style="color:white;font-size:20px;" [routerLink]="['/music']">Music</a></li>
+                    
+                    
+                </ul>
+            </div>
+    </div>
+
+    </div>
+        
+        </nav>
+        <div>
+             <router-outlet></router-outlet>
+         </div>
+      </div>
+<!--</div>-->
+
+
 
  <div class="text-center">
     <p>    
