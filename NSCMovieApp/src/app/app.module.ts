@@ -12,6 +12,8 @@ import { StarComponent } from './shared/starDisplay/star.component';
 import { routing }        from './app.routing';
 import { MusicComponent } from "./music/music.component";
 import { HomeComponent } from "./home/home.component";
+import { HttpModule } from '@angular/http';
+import { MusicService } from './shared/musciservice/music.service';
 //import { StarRatingModule } from 'angular-star-rating';
 
 @NgModule({
@@ -21,7 +23,8 @@ import { HomeComponent } from "./home/home.component";
         BrowserModule,
         FormsModule,
         NgxPaginationModule,
-        routing
+        routing,
+        HttpModule
         //StarRatingModule.forRoot()
     ],
     //All Component & Pipe
@@ -41,7 +44,7 @@ import { HomeComponent } from "./home/home.component";
         AppComponent
     ],
     //All Services decl here
-    providers:[]
+    providers:[MusicService]
 })
 
 export class AppModule{
