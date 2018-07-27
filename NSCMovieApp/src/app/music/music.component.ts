@@ -9,7 +9,8 @@ import { MusicService } from '../shared/musciservice/music.service';
 export class MusicComponent {
 
   searchResults: Array<String>=[];
-  artistId: number = 0;
+  //artistId: number = 0;
+  artistName : string;
 
   selectedArtist: string;
 
@@ -18,13 +19,12 @@ export class MusicComponent {
   search(searchTerm) {
     this.musicService.search(searchTerm).subscribe(data => {
       this.searchResults = data;
-      console.log('data', data);
+      //console.log('data', data);
     });
     
   }
 
-  /*getAlbums(artistId: number, artistName: string) {
-    this.artistId = artistId;
+  getAlbums(artistName: string) {
     this.selectedArtist = artistName;
-  }*/
+  }
 }

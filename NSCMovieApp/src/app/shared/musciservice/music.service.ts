@@ -6,6 +6,7 @@ import { Observable } from 'rxjs/Observable';
 import { Http,Response,RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { HttpParams } from "@angular/common/http";
 
 
 @Injectable()
@@ -18,12 +19,27 @@ export class MusicService {
   }
 
   public search(searchTerm:string): Observable<any> {   
-	let myParams = new URLSearchParams();
-	myParams.append('name', searchTerm);
-    let options = new RequestOptions({params: myParams });
-    return this._http.get(this._musicUrl,options)
+    //let headers = new Headers({ 'Content-Type': 'application/json' });
+    let myParams = new HttpParams().set("artists.name", searchTerm);
+    //let options = new RequestOptions({params: myParams });
+    return this._http.get(this._musicUrl,{
+        params: myParams
+      })
     .map(response => response.json())
       .catch(this.handleError)
+  }
+
+  public getAlbums(artistName:string)
+  {
+    let myParams : URLSearchParams = new URLSearchParams();
+	myParams.set('name', artistName);
+    //let options = new RequestOptions({params: myParams });
+    return this._http.get(this._musicUrl,{
+        search: myParams
+      })
+    .map(response => response.json())
+      .catch(this.handleError)
+     
   }
 
 

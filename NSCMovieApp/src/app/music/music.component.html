@@ -12,13 +12,14 @@
                     <!--<a id="{{ artist.name}}" href="#" (click)="getAlbums(artist.artistId, artist.artistName)">{{ artist.artistName }}</a>-->
                     <!--{{artist.artists.id}}-->
                     <div *ngFor="let name of artist['artists'];let idx=index;">
-                    {{name.name}}
+                            <!--<a id="{{name.name}}" href="#" (click)="getAlbums(artist.artistId, artist.artistName)">{{ artist.artistName }}</a>-->
+                            <a id="{{name.name}}"  (click)="getAlbums(name.name)">{{ name.name }}</a>
                     </div>
                     </div>
                   
                 </div>
                 <div class="col-xs-12" [ngClass]="{'col-sm-8': searchResults.length > 0 }">
-                  <!--<h3>{{ selectedArtist }}</h3>-->
+                  <h3>{{ selectedArtist }}</h3>
                   <!-- App Album Component Goes Here -->
                 </div>
               </div>

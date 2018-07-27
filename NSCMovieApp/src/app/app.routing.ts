@@ -13,7 +13,7 @@ const appRoutes: Routes = [
     //{path: 'empdetail', component: EmpDetailComponent},
 
     // otherwise redirect to home
-    { path: '**', redirectTo: '' }
+    /*{ path: '**', redirectTo: '' }*/
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);
