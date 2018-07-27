@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ssolay/AngularTraining/issues"
   },
-  "homepage": "https://github.com/ssolay/AngularTraining#readme"
+  "homepage": "https://github.com/ssolay/AngularTraining#readme",
+  "dependencies": {
+    "moment": "^2.22.2"
+  }
 }
