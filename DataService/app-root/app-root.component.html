@@ -1,0 +1,25 @@
+<nsc-app-header [route]="route"></nsc-app-header>
+
+<div class="nsc-content" role="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nsc-spacer size="md"></nsc-spacer>
+        <nsc-school-select  [sssRequestCheck]="sssRequestCheck"></nsc-school-select>
+        <nsc-stepper [route]="route"></nsc-stepper>
+
+        <nsc-spacer size="md"></nsc-spacer>
+
+        <nsc-page-title [route]="route"></nsc-page-title>
+
+       <router-outlet  (deactivate)="onDeactivate()"></router-outlet>
+
+        <nsc-spacer size="md"></nsc-spacer>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<nsc-app-footer></nsc-app-footer>
+
+<nsc-scroll-to-top></nsc-scroll-to-top>
